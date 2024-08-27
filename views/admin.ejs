@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Admin Page</title>
+		<link rel="stylesheet" href="/stylesheets/main.css" />
+	</head>
+	<body>
+		<div class="container">
+			<h1>Admin</h1>
+			<a href="http://localhost:3000/users/login" class="profile-link logout"
+				>log out</a
+			>
+			<div class="movies_container"></div>
+			<div class="modal"></div>
+			<form class="movies-form">
+				<label for="title">Title</label><br />
+				<input type="text" id="title" placeholder="Title" /><br />
+				<span id="title-error" class="error-message"></span><br />
+				<label for="genre">Genre</label><br />
+				<input type="text" id="genre" placeholder="Genre" /><br />
+				<span id="genre-error" class="error-message"></span><br />
+				<label for="releaseDate">Release Date</label><br />
+				<input type="date" id="releaseDate" placeholder="Release Date" /><br />
+				<span id="releaseDate-error" class="error-message"></span>
+
+				<input type="submit" class="form-submit" value="Create Movie" />
+			</form>
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+		<script src="/javascripts/createMovies.js"></script>
+	</body>
+</html>
