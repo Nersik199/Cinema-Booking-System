@@ -30,6 +30,10 @@
 [![dotenv](https://img.shields.io/badge/dotenv-1F3F4F?style=for-the-badge&logo=npm&logoColor=white)](https://www.npmjs.com/package/dotenv)  
 **dotenv:** Библиотека для загрузки переменных окружения из файла `.env` в процесс `Node.js`.
 
+[![nodemon](https://img.shields.io/badge/nodemon-76D04B?style=for-the-badge&logo=nodemon&logoColor=white)](https://nodemon.io)  
+**nodemon:** Утилита для автоматической перезагрузки приложения при изменении файлов.
+
+
 ## 3. Структура базы данных
 Приложение включает следующие модели:
 - **Users:** Пользователи приложения.
