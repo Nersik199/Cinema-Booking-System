@@ -6,7 +6,7 @@
 
 ## 2. Стек технологий
 
-[![Node.js](https://path-to-your-image/nodejs.png)](https://nodejs.org)  
+[![Node.js]([https://path-to-your-image/nodejs.png](https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg))](https://nodejs.org)  
 **Node.js:** Среда выполнения JavaScript.
 
 [![Express](https://path-to-your-image/express.png)](https://expressjs.com)  
