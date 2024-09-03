@@ -6,36 +6,29 @@
 
 ## 2. Стек технологий
 
-<div style="display: flex; flex-wrap: wrap;">
-    <a href="https://nodejs.org" target="_blank">
-        <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js" style="width: 100px; height: 27px; margin: 5px;">
-    </a>
-    <a href="https://expressjs.com" target="_blank">
-        <img src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white" alt="Express" style="width: 100px; height: 27px; margin: 5px;">
-    </a>
-    <a href="https://sequelize.org" target="_blank">
-        <img src="https://img.shields.io/badge/Sequelize-52B0E7?style=for-the-badge&logo=sequelize&logoColor=white" alt="Sequelize" style="width: 100px; height: 27px; margin: 5px;">
-    </a>
-    <a href="https://jwt.io" target="_blank">
-        <img src="https://img.shields.io/badge/JSON%20Web%20Tokens-000000?style=for-the-badge&logo=json-web-tokens&logoColor=white" alt="JWT" style="width: 100px; height: 27px; margin: 5px;">
-    </a>
-    <a href="https://www.mysql.com" target="_blank">
-        <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" style="width: 100px; height: 27px; margin: 5px;">
-    </a>
-    <a href="https://en.wikipedia.org/wiki/MD5" target="_blank">
-        <img src="https://img.shields.io/badge/MD5-000000?style=for-the-badge&logo=md5&logoColor=white" alt="MD5" style="width: 100px; height: 27px; margin: 5px;">
-    </a>
-    <a href="https://joi.dev" target="_blank">
-        <img src="https://img.shields.io/badge/Joi-5D5D5D?style=for-the-badge&logo=joi&logoColor=white" alt="Joi" style="width: 100px; height: 27px; margin: 5px;">
-    </a>
-    <a href="https://www.npmjs.com/package/dotenv" target="_blank">
-        <img src="https://img.shields.io/badge/dotenv-1F3F4F?style=for-the-badge&logo=npm&logoColor=white" alt="dotenv" style="width: 100px; height: 27px; margin: 5px;">
-    </a>
-</div>
+[![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org)  
+**Node.js:** Среда выполнения JavaScript.
 
+[![Express](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)](https://expressjs.com)  
+**Express:** Веб-фреймворк для создания API.
 
+[![Sequelize](https://img.shields.io/badge/Sequelize-52B0E7?style=for-the-badge&logo=sequelize&logoColor=white)](https://sequelize.org)  
+**Sequelize:** ORM для работы с базой данных MySQL.
 
+[![JWT](https://img.shields.io/badge/JSON%20Web%20Tokens-000000?style=for-the-badge&logo=json-web-tokens&logoColor=white)](https://jwt.io)  
+**JWT (JSON Web Tokens):** Для аутентификации и управления сессиями.
 
+[![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)](https://www.mysql.com)  
+**MySQL:** СУБД для хранения данных.
+
+[![MD5](https://img.shields.io/badge/MD5-000000?style=for-the-badge&logo=md5&logoColor=white)](https://en.wikipedia.org/wiki/MD5)  
+**MD5:** Алгоритм хеширования, используемый для защиты паролей.
+
+[![Joi](https://img.shields.io/badge/Joi-5D5D5D?style=for-the-badge&logo=joi&logoColor=white)](https://joi.dev)  
+**Joi:** Библиотека для валидации данных, используемая для проверки схем данных (например, формы ввода).
+
+[![dotenv](https://img.shields.io/badge/dotenv-1F3F4F?style=for-the-badge&logo=npm&logoColor=white)](https://www.npmjs.com/package/dotenv)  
+**dotenv:** Библиотека для загрузки переменных окружения из файла `.env` в процесс `Node.js`.
 
 ## 3. Структура базы данных
 Ваше приложение включает следующие модели:
