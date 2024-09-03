@@ -6,29 +6,30 @@
 
 ## 2. Стек технологий
 
-![Node.js](assets/tech-logos/nodejs.png)  
+[![Node.js](https://path-to-your-image/nodejs.png)](https://nodejs.org)  
 **Node.js:** Среда выполнения JavaScript.
 
-![Express](assets/tech-logos/express.png)  
+[![Express](https://path-to-your-image/express.png)](https://expressjs.com)  
 **Express:** Веб-фреймворк для создания API.
 
-![Sequelize](assets/tech-logos/sequelize.png)  
+[![Sequelize](https://path-to-your-image/sequelize.png)](https://sequelize.org)  
 **Sequelize:** ORM для работы с базой данных MySQL.
 
-![JWT](assets/tech-logos/jwt.png)  
+[![JWT](https://path-to-your-image/jwt.png)](https://jwt.io)  
 **JWT (JSON Web Tokens):** Для аутентификации и управления сессиями.
 
-![MySQL](assets/tech-logos/mysql.png)  
+[![MySQL](https://path-to-your-image/mysql.png)](https://www.mysql.com)  
 **MySQL:** СУБД для хранения данных.
 
-![MD5](assets/tech-logos/md5.png)  
+[![MD5](https://path-to-your-image/md5.png)](https://en.wikipedia.org/wiki/MD5)  
 **MD5:** Алгоритм хеширования, используемый для защиты паролей.
 
-![Joi](assets/tech-logos/joi.png)  
+[![Joi](https://path-to-your-image/joi.png)](https://joi.dev)  
 **Joi:** Библиотека для валидации данных, используемая для проверки схем данных (например, формы ввода).
 
-![dotenv](assets/tech-logos/dotenv.png)  
+[![dotenv](https://path-to-your-image/dotenv.png)](https://www.npmjs.com/package/dotenv)  
 **dotenv:** Библиотека для загрузки переменных окружения из файла `.env` в процесс `Node.js`.
+
 
 
 ## 3. Структура базы данных
