@@ -6,29 +6,30 @@
 
 ## 2. Стек технологий
 
-[![Node.js]([https://path-to-your-image/nodejs.png](https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg))](https://nodejs.org)  
+[![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org)  
 **Node.js:** Среда выполнения JavaScript.
 
-[![Express](https://path-to-your-image/express.png)](https://expressjs.com)  
+[![Express](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)](https://expressjs.com)  
 **Express:** Веб-фреймворк для создания API.
 
-[![Sequelize](https://path-to-your-image/sequelize.png)](https://sequelize.org)  
+[![Sequelize](https://img.shields.io/badge/Sequelize-52B0E7?style=for-the-badge&logo=sequelize&logoColor=white)](https://sequelize.org)  
 **Sequelize:** ORM для работы с базой данных MySQL.
 
-[![JWT](https://path-to-your-image/jwt.png)](https://jwt.io)  
+[![JWT](https://img.shields.io/badge/JSON%20Web%20Tokens-000000?style=for-the-badge&logo=json-web-tokens&logoColor=white)](https://jwt.io)  
 **JWT (JSON Web Tokens):** Для аутентификации и управления сессиями.
 
-[![MySQL](https://path-to-your-image/mysql.png)](https://www.mysql.com)  
+[![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)](https://www.mysql.com)  
 **MySQL:** СУБД для хранения данных.
 
-[![MD5](https://path-to-your-image/md5.png)](https://en.wikipedia.org/wiki/MD5)  
+[![MD5](https://img.shields.io/badge/MD5-000000?style=for-the-badge&logo=md5&logoColor=white)](https://en.wikipedia.org/wiki/MD5)  
 **MD5:** Алгоритм хеширования, используемый для защиты паролей.
 
-[![Joi](https://path-to-your-image/joi.png)](https://joi.dev)  
+[![Joi](https://img.shields.io/badge/Joi-5D5D5D?style=for-the-badge&logo=joi&logoColor=white)](https://joi.dev)  
 **Joi:** Библиотека для валидации данных, используемая для проверки схем данных (например, формы ввода).
 
-[![dotenv](https://path-to-your-image/dotenv.png)](https://www.npmjs.com/package/dotenv)  
+[![dotenv](https://img.shields.io/badge/dotenv-1F3F4F?style=for-the-badge&logo=npm&logoColor=white)](https://www.npmjs.com/package/dotenv)  
 **dotenv:** Библиотека для загрузки переменных окружения из файла `.env` в процесс `Node.js`.
+
 
 
 
