@@ -91,7 +91,6 @@ DB_DATABASE=cinema_db
 5. **Start the server**
 ```bash
 npm run dev
-yarn dev
 ```
 
 Your app should now be running on `http://localhost:3000`.
