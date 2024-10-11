@@ -1,108 +1,191 @@
 
-# Описание вашего сервера
+# Cinema Booking System
 
-## 1. Общие сведения
-Сервер представляет собой API, разработанный на базе Node.js с использованием фреймворка Express и ORM Sequelize. Сервер предназначен для управления пользователями, книгами, отзывами и комментариями в приложении, предоставляя функциональность для аутентификации, создания, редактирования и удаления данных. Также предусмотрена возможность управления избранными книгами пользователей.
+![Node.js](https://img.shields.io/badge/node.js-v14.17.5-green)
+![Express](https://img.shields.io/badge/Express-v4.17.1-blue)
+![Sequelize](https://img.shields.io/badge/Sequelize-v6.6.5-yellow)
+![MySQL](https://img.shields.io/badge/MySQL-v8.0.26-lightblue)
+![JWT](https://img.shields.io/badge/JWT-token-red)
+![License](https://img.shields.io/badge/License-MIT-brightgreen)
 
-## 2. Стек технологий
+This is a cinema booking system where users can register, log in, view available movies and showtimes, and book seats for a specific showtime. Admins have the ability to manage movies, showtimes, and reservations.
 
-[![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org)  
-**Node.js:** Среда выполнения JavaScript.
+## Table of Contents
+1. [Project Overview](#project-overview)
+2. [Features](#features)
+3. [Technology Stack](#technology-stack)
+4. [Setup and Installation](#setup-and-installation)
+5. [Database Structure](#database-structure)
+6. [API Endpoints](#api-endpoints)
+7. [Environment Variables](#environment-variables)
+8. [Usage](#usage)
+9. [Error Handling](#error-handling)
+10. [License](#license)
 
-[![Sequelize](https://img.shields.io/badge/Sequelize-52B0E7?style=for-the-badge&logo=sequelize&logoColor=white)](https://sequelize.org)  
-**Sequelize:** ORM для работы с базой данных MySQL.
+## Project Overview
+The Cinema Booking System allows users to register and book seats for movie showtimes. Admins can add new movies and create showtimes for each movie. It also features a fully functional authentication system, where users can log in and update their profiles.
 
-[![Express](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)](https://expressjs.com)  
-**Express:** Веб-фреймворк для создания API.
+## Features
+### For Users:
+- User registration and login
+- View available movies and showtimes
+- Book seats for a selected showtime
+- View booking history
+- Profile management (update personal details)
 
-[![nodemon](https://img.shields.io/badge/nodemon-76D04B?style=for-the-badge&logo=nodemon&logoColor=white)](https://nodemon.io)  
-**nodemon:** Утилита для автоматической перезагрузки приложения при изменении файлов.
+### For Admins:
+- Add new movies to the system
+- Create showtimes for movies
+- View and manage seat reservations
 
-[![dotenv](https://img.shields.io/badge/dotenv-1F3F4F?style=for-the-badge&logo=npm&logoColor=white)](https://www.npmjs.com/package/dotenv)  
-**dotenv:** Библиотека для загрузки переменных окружения из файла `.env` в процесс `Node.js`.
+## Technology Stack
+**Backend:**
+- Node.js
+- Express.js
+- Sequelize (for database interaction)
+- MySQL (as the database)
 
-[![JWT](https://img.shields.io/badge/JSON%20Web%20Tokens-000000?style=for-the-badge&logo=json-web-tokens&logoColor=white)](https://jwt.io)  
-**JWT (JSON Web Tokens):** Для аутентификации и управления сессиями.
+**Frontend:**
+- EJS (for rendering views)
+- HTML/CSS (for basic styling)
+- JavaScript 
 
-[![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)](https://www.mysql.com)  
-**MySQL:** DBMS для хранения данных.
+**Middleware:**
+- JSON Web Tokens (JWT) for authentication
+- Joi for request validation
 
-[![Joi](https://img.shields.io/badge/Joi-5D5D5D?style=for-the-badge&logo=joi&logoColor=white)](https://joi.dev)  
-**Joi:** Библиотека для валидации данных, используемая для проверки схем данных (например, формы ввода).
-
-[![MD5](https://img.shields.io/badge/MD5-000000?style=for-the-badge&logo=md5&logoColor=white)](https://en.wikipedia.org/wiki/MD5)  
-**MD5:** Алгоритм хеширования, используемый для защиты паролей.
-
-
-## 3. Структура базы данных
-Приложение включает следующие модели:
-- **Users:** Пользователи приложения.
-- **Book:** Книги, добавленные пользователями.
-- **Review:** Отзывы на книги, оставленные пользователями.
-- **Favorite:** Избранные книги пользователей.
-- **Comment:** Комментарии к отзывам.
-
-Эти модели имеют связи, такие как один ко многим (например, один пользователь может иметь много книг, один отзыв может иметь много комментариев).
-
-## 4. API Эндпоинты
-
-### 4.1 Пользователи (Users)
-- **POST /users/registration:** Регистрация нового пользователя.
-- **POST /users/login:** Авторизация пользователя.
-- **GET /users/user/profile:** Получение профиля авторизованного пользователя.
-- **GET /users/:userId/review-summary:** Получение сводки отзывов пользователя.
-- **PUT /users/update/user/profile:** Обновление профиля пользователя.
-
-### 4.2 Книги (Books)
-- **POST /books/create:** Создание новой книги.
-- **GET /books/show/books:** Получение списка книг.
-- **GET /books/top-rated:** Получение списка книг с наивысшим рейтингом.
-- **GET /books/authors/book-count:** Получение количества книг по авторам.
-- **GET /books/:id/favorite:** Добавление книги в избранное.
-- **DELETE /books/:id/favorite:** Удаление книги из избранного.
-
-### 4.3 Обзоры (Reviews)
-- **POST /reviews/:id:** Создание нового отзыва.
-- **GET /reviews/show:** Получение списка отзывов.
-- **GET /reviews/:id:** Просмотр отзыва по его идентификатору.
-- **GET /reviews/most-active:** Получение списка самых активных рецензентов.
-
-### 4.4 Комментарии (Comments)
-- **POST /comments/review/:id:** Добавление комментария к отзыву.
-- **GET /comments/show/:id:** Получение комментариев к определенному отзыву.
-
-### 4.5 Админ панель (Admin)
-- **GET /admin/users/list:** Получение списка пользователей.
-- **GET /admin/review:** Получение списка отзывов для администрирования.
-- **DELETE /admin/review/:id:** Удаление отзыва.
-- **DELETE /admin/delete/user/:id:** Удаление пользователя.
-
-## 5. Авторизация и Аутентификация
-JWT: Токены создаются с использованием `jsonwebtoken` и сохраняются в заголовках запросов для авторизованных операций. Токены имеют срок действия 30 дней.
-
-## 6. Настройки и конфигурации
-Все настройки хранятся в `.env` файле, включая параметры подключения к базе данных и секреты для JWT. Пример файла конфигурации:
-
-```plaintext
-PORT=
-USER_PASSWORD_SECRET=
-JWT_TOKEN=
-DB_HOST=
-DB_PORT=
-DB_USER=
-DB_PASSWORD=
-DB_DATABASE=
+## Setup and Installation
+1. **Clone the repository**
+```bash
+git clone https://github.com/yourusername/cinema-booking-system.git
+cd cinema-booking-system
 ```
 
-## 7. Развертывание
-Чтобы развернуть сервер, выполните следующие шаги:
+2. **Install dependencies**
+```bash
+npm install
+```
 
-Склонируйте репозиторий и установите зависимости с помощью `npm install` или `yarn`.
-Настройте файл `.env`с параметрами вашего окружения.
-Запустите миграции для создания таблиц в базе данных.
-Запустите сервер командой `npm run dev ` или `yarn dev`.
+3. **Set up the database**
+Ensure you have MySQL installed and running on your system. Create a new database and update your `.env` file with your database credentials.
 
-## 8. Логирование и обработка ошибок
-Обработка ошибок реализована в контроллерах, и в случае ошибки возвращается ответ с соответствующим статусом и сообщением. Логирование подключения к базе данных включено в конфигурацию Sequelize.
+4. **Set up environment variables**
+Create a `.env` file in the root directory with the following content:
+```bash
+# Server configuration
+PORT=3000
+
+# JWT Secret key
+JWT_TOKEN=your_secret_key
+
+# Database configuration
+DB_HOST=localhost
+DB_PORT=3306
+DB_USER=root
+DB_PASSWORD=password
+DB_DATABASE=cinema_db
+```
 
 
+
+5. **Start the server**
+```bash
+npm run dev
+yarn dev
+```
+
+Your app should now be running on `http://localhost:3000`.
+
+## Database Structure
+This project uses MySQL with Sequelize ORM. Here’s the basic structure:
+
+### Users Table
+- `id` (primary key)
+- `username`
+- `password` (hashed)
+- `email`
+- `role` (either 'user' or 'admin')
+
+### Movies Table
+- `id` (primary key)
+- `title`
+- `genre`
+- `releaseDate`
+
+### ShowTimes Table
+- `id` (primary key)
+- `movieId` (foreign key referencing Movies table)
+- `showtime` (datetime of the showtime)
+
+### Seats Table
+- `id` (primary key)
+- `row` (seat row, e.g., A, B, C)
+- `number` (seat number in the row)
+- `isAvailable` (boolean indicating seat availability)
+
+### Reservations Table
+- `id` (primary key)
+- `userId` (foreign key referencing Users table)
+- `showtimeId` (foreign key referencing ShowTimes table)
+- `seatId` (foreign key referencing Seats table)
+
+## API Endpoints
+### User Routes
+| Method | Endpoint                   | Description                       | Auth Required |
+|--------|----------------------------|-----------------------------------|---------------|
+| GET    | /registration               | Render registration form          | No            |
+| POST   | /registration               | Register a new user               | No            |
+| POST   | /login                      | Log in and get JWT token          | No            |
+| GET    | /profile                    | Get logged-in user's profile      | Yes           |
+| PUT    | /update/user/profile        | Update user's profile             | Yes           |
+| DELETE | /delete/user/:id            | Delete user account               | Yes           |
+
+### Cinema Routes
+| Method | Endpoint                   | Description                       | Auth Required |
+|--------|----------------------------|-----------------------------------|---------------|
+| GET    | /movies/data                | Get all movies with showtimes     | Yes           |
+| GET    | /seats/status               | Get seat availability for showtime| Yes           |
+| POST   | /reserve                    | Reserve a seat for a showtime     | Yes           |
+
+### Admin Routes
+| Method | Endpoint                   | Description                       | Auth Required |
+|--------|----------------------------|-----------------------------------|---------------|
+| GET    | /admin                      | Render admin dashboard            | Yes (Admin)   |
+| GET    | /movies                     | Get all movies                    | Yes (Admin)   |
+| POST   | /create/movies              | Add a new movie                   | Yes (Admin)   |
+| POST   | /create/times               | Add a showtime for a movie        | Yes (Admin)   |
+
+## Environment Variables
+Make sure to configure the following environment variables in the `.env` file:
+```bash
+PORT=                    # The port on which the server runs
+JWT_TOKEN=               # Secret key for JWT token signing
+DB_HOST=                 # Host for MySQL (e.g., localhost)
+DB_PORT=                 # Port for MySQL (usually 3306)
+DB_USER=                 # MySQL user
+DB_PASSWORD=             # MySQL password
+DB_DATABASE=             # MySQL database name
+```
+
+## Usage
+### User Registration and Login:
+- Users can register on the `/registration` page.
+- After registration, users can log in on the `/login` page.
+- Once logged in, users can view their profile and booking history.
+
+### Booking a Movie:
+- After logging in, users can view all available movies and showtimes on the `/movies` page.
+- Users can select a movie, view available seats, and book seats for a specific showtime.
+
+### Admin Features:
+- Admins can log in and access the `/admin` dashboard to manage movies and showtimes.
+
+## Error Handling
+The application includes basic error handling for:
+- Invalid login credentials
+- Unauthorized access to restricted routes (JWT-based)
+- Validation errors (using Joi for input validation)
+- 404 Not Found for unavailable routes
+
+## License
+This project is licensed under the MIT License.
