@@ -64,6 +64,7 @@ export default {
 				.json({ message: 'Internal server error', error: error.message });
 		}
 	},
+
 	async getUsers(req, res) {
 		try {
 			const data = await Users.findAll({
@@ -105,6 +106,7 @@ export default {
 			res.status(500).json({ message: e.message, status: 500 });
 		}
 	},
+
 	async userUpdate(req, res) {
 		try {
 			const { id } = req.user;
@@ -138,6 +140,7 @@ export default {
 			});
 		}
 	},
+
 	async deleteUser(req, res) {
 		try {
 			const { id } = req.params;
